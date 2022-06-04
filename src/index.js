@@ -18,7 +18,10 @@ import NotFound from './pages/404'
 import Protected from './components/Protected'
 
 import reportWebVitals from './reportWebVitals'
+
 require('dotenv').config()
+
+const {REACT_APP_CLIENT_ID} = process.env
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
@@ -37,7 +40,7 @@ root.render(
         <Route
           path="/login"
           element={
-            <GoogleOAuthProvider clientId={process.env.CLIENT_ID}>
+            <GoogleOAuthProvider clientId={REACT_APP_CLIENT_ID}>
               <Login />
             </GoogleOAuthProvider>
           }
@@ -45,7 +48,7 @@ root.render(
         <Route
           path="/register"
           element={
-            <GoogleOAuthProvider clientId={process.env.CLIENT_ID}>
+            <GoogleOAuthProvider clientId={REACT_APP_CLIENT_ID}>
               <Register />
             </GoogleOAuthProvider>
           }
@@ -54,8 +57,8 @@ root.render(
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
-  </Provider>,
-)
+  </Provider>
+);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
