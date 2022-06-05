@@ -5,20 +5,20 @@ export const filterCar = (data) => async (dispatch) => {
     const token = localStorage.getItem('token')
     // sending query
     const response = await fetch(
-      process.env.ENDPOINT_FIND +
+      process.env.REACT_APP_ENDPOINT_FIND +
         new URLSearchParams({
           time: data.time,
           date: data.date,
           capacity: data.capacity,
         }),
       {
-        method: 'GET',
+        method: "GET",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
           Authorization: `Bearer ${token}`,
         },
-      },
-    )
+      }
+    );
     let result = await response.json()
     dispatch({
       type: GET_FILTER,

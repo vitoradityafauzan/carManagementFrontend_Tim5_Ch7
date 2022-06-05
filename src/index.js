@@ -19,7 +19,7 @@ import Protected from './components/Protected'
 
 import reportWebVitals from './reportWebVitals'
 
-require('dotenv').config()
+//require('dotenv').config()
 
 const {REACT_APP_CLIENT_ID} = process.env
 

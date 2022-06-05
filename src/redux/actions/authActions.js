@@ -3,13 +3,13 @@ import Swal from "sweetalert2";
 
 export const registerViaForm = (data) => async (dispatch) => {
   try {
-    const response = await fetch(process.env.ENDPOINT_REGISTER, {
-      method: 'POST',
+    const response = await fetch(process.env.REACT_APP_ENDPOINT_REGISTER, {
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(data),
-    })
+    });
 
     const result = await response.json()
 
@@ -36,13 +36,13 @@ export const registerViaForm = (data) => async (dispatch) => {
 
 export const loginViaForm = (data) => async (dispatch) => {
   try {
-    const response = await fetch(process.env.ENDPOINT_LOGIN, {
-      method: 'POST',
+    const response = await fetch(process.env.REACT_APP_ENDPOINT_LOGIN, {
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(data),
-    })
+    });
     const result = await response.json()
     if (result.token) {
       dispatch({
@@ -90,13 +90,13 @@ export const loginWithGoogle = (accessToken) => async (dispatch) => {
     const data = {
       access_token: accessToken,
     }
-    const response = await fetch(process.env.ENDPOINT_GOOGLE, {
-      method: 'POST',
+    const response = await fetch(process.env.REACT_APP_ENDPOINT_GOOGLE, {
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(data),
-    })
+    });
     const result = await response.json()
 
     if (result.token) {
@@ -123,13 +123,13 @@ export const loginWithGoogle = (accessToken) => async (dispatch) => {
 export const getUser = () => async (dispatch) => {
   try {
     const token = localStorage.getItem('token')
-    const response = await fetch(process.env.ENDPOINT_ME, {
-      method: 'GET',
+    const response = await fetch(process.env.REACT_APP_ENDPOINT_ME, {
+      method: "GET",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
         Authorization: `Bearer ${token}`,
       },
-    })
+    });
     const result = await response.json()
     if (result) {
       dispatch({
