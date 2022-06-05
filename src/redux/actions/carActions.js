@@ -5,7 +5,7 @@ export const filterCar = (data) => async (dispatch) => {
     const token = localStorage.getItem('token')
     // sending query
     const response = await fetch(
-      process.env.REACT_APP_ENDPOINT_FIND +
+      `${process.env.REACT_APP_ENDPOINT_FIND}` +
         new URLSearchParams({
           time: data.time,
           date: data.date,
