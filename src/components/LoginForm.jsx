@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useGoogleLogin } from '@react-oauth/google'
 import { Container, Row, Col, Form, Button } from 'react-bootstrap'
 import HeaderCar from '../public/img/HeaderCar.png'
-import { Navigate } from 'react-router-dom'
+import { Navigate, Link } from 'react-router-dom'
 
 import { loginViaForm, loginWithGoogle } from '../redux/actions/authActions'
 
@@ -80,7 +80,7 @@ const LoginFormComponent = () => {
                     Sign in
                   </Button>
                   <p className="sign-up text-right">
-                    Don't have an Account? <a href="/register">Sign Up?</a>
+                    Don't have an Account? <Link to="/register">Sign Up Here</Link>
                   </p>
                 </Form>
                 <Button

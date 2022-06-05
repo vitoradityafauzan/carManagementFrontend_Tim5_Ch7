@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useGoogleLogin } from '@react-oauth/google'
 import { Navigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import HeaderCar from '../public/img/HeaderCar.png'
 import { Container, Row, Col, Form, Button } from 'react-bootstrap'
 
@@ -92,7 +93,7 @@ const RegisterFormComponent = () => {
                     Sign up
                   </Button>
                   <p className="sign-up text-right">
-                    Have an Account? <a href="/login">Sign In?</a>
+                    Have an Account? <Link to="/login">Sign In Here</Link>
                   </p>
                   <Button
                     type="button"

@@ -13,7 +13,7 @@ const HeaderComponent = () => {
         <Row>
           <Col lg className="my-auto">
             <h1 className="h1 fw-bold me-4">
-              Sewa & Rental Mobil Terbaik di kawasan Bali
+              Sewaa & Rental Mobil Terbaik di kawasan Bali
             </h1>
             <p className="w-75">
               Selamat datang di Binar Car Rental. Kami menyediakan mobil
