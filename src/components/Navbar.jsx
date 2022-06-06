@@ -49,7 +49,7 @@ const NavbarComponent = () => {
                     href="https://car-manage-tim5-ch7-frontend.herokuapp.com/#ourService"
                     className="fw-bold my-2 mx-2"
                   >
-                    Our Service
+                    Our Serviceee
                   </Nav.Link>
                   <Nav.Link
                     // href="http://localhost:3000/#whyUs"
